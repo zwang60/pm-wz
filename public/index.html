@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href='libs/bootstrap/dist/css/bootstrap.css' />
+</head>
+
+<body ng-app="app" ng-controller="c2">
+    <div class="container" ng-init="getC2()">
+        <form class="form">
+            <div class="form-group">
+                <label>first name</label>
+                <input class="form-control" ng-model="nc2.firstName">
+            </div>
+            <div class="form-group">
+                <label>last name</label>
+                <input class="form-control" ng-model="nc2.lastName">
+            </div>
+            <button  class="btn btn-primary" ng-click="addC2(nc2)">Submit</button>
+        </form>
+    </div>
+    <br>
+    <table class="table table-striped">
+        <tr>
+            <th>first name</th>
+            <th>last name</th>
+        </tr>
+        <tr ng-repeat="c2 in c2s">
+            <td>{{c2.firstName}}</td>
+            <td>{{c2.lastName}}</td>
+        </tr>
+    </table>
+    <script src="libs/angular/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
