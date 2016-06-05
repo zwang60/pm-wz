@@ -6,8 +6,8 @@
     <link rel="stylesheet" href='libs/bootstrap/dist/css/bootstrap.css' />
 </head>
 
-<body ng-app="app" ng-controller="c2" ng-init="getC2()">
-    <div class="container">
+<body ng-app="app" ng-controller="c2">
+    <div class="container" ng-init="getC2()">
         <form class="form">
             <div class="form-group">
                 <label>first name</label>
@@ -17,12 +17,7 @@
                 <label>last name</label>
                 <input class="form-control" ng-model="nc2.lastName">
             </div>
-            <div class="form-group">
-                <label>email</label>
-                <input class="form-control" ng-model="nc2.email">
-            </div>
-            <button class="btn btn-default" ng-click="updateC2(nc2)">Update</button>
-            <button class="btn btn-primary" ng-click="addC2(nc2)">Submit</button>
+            <button  class="btn btn-primary" ng-click="addC2(nc2)">Submit</button>
         </form>
     </div>
     <br>
@@ -30,17 +25,12 @@
         <tr>
             <th>first name</th>
             <th>last name</th>
-            <th>email</th>
-            <th>action</th>
         </tr>
-        <tr ng-repeat="c2 in c2s" ng-click="selectC2(c2)">
+        <tr ng-repeat="c2 in c2s">
             <td>{{c2.firstName}}</td>
             <td>{{c2.lastName}}</td>
-            <td>{{c2.email}}</td>
-            <td><button class="btn btn-danger" ng-click="delC2(c2)">Delete</td>
         </tr>
     </table>
-    <script src="libs/underscore/underscore.js"></script>
     <script src="libs/angular/angular.js"></script>
     <script src="app.js"></script>
 </body>

@@ -8,9 +8,6 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var api = require('./routes/api');
-var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test1');
-
 
 var app = express();
 
